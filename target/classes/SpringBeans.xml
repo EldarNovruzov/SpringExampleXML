@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+    <bean id="student" class="beans.Student" autowire="byType" scope="prototype">
+<!--        <constructor-arg ref="teacher"></constructor-arg>-->
+        <property name="name" value="Eldar"></property>
+        <!--  <property name="teacher" ref="teacher"></property>-->
+    </bean>
+ 
+    <bean id="teacher" class="beans.Teacher" >
+        <property name="name" value="Sarkhan"></property>
+    </bean>
+</beans>
